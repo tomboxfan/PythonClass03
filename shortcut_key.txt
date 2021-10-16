@@ -1,0 +1,16 @@
+close python file                   ctrl + F4
+copy                                ctrl + c
+paste                               ctrl + v
+copy the whole line                 ctrl + d
+
+delete the current line             ctrl + y
+
+
+
+run the python file                 alt + shift + f10
+rerun my previous python file       ctrl + f5
+
+move the line up / down             alt + shift + up / down
+
+
+enter block editing mode            alt + shift + insert
