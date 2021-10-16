@@ -54,3 +54,10 @@ print(left_star_right_star)
 print(star_line)
 
 print('-------------------------------------------')
+
+
+'''
+HOMEWORK: 
+According to python_0007_practice_str_drawing_to_students.xlsx
+print P Y T H O N 6 letters in the pycharm console.
+'''
