@@ -61,3 +61,78 @@ HOMEWORK:
 According to python_0007_practice_str_drawing_to_students.xlsx
 print P Y T H O N 6 letters in the pycharm console.
 '''
+
+'''
+Letter P
+'''
+
+left_star = ' ' * 5 + '*'
+
+print(star_line)
+print(left_star_right_star)
+print(left_star_right_star)
+print(star_line)
+print(left_star)
+print(left_star)
+print(left_star)
+
+print('-------------------------------------------')
+
+right_star = ' ' * 9 + '*'
+
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(star_line)
+print(right_star)
+print(right_star)
+print(star_line)
+
+
+print('-------------------------------------------')
+
+central_star = ' ' * 7 + '*'
+
+print(star_line)
+print(central_star)
+print(central_star)
+print(central_star)
+print(central_star)
+print(central_star)
+print(central_star)
+
+
+print('-----------------------------------------')
+# Follow the same logic, I can print letter 'H'
+
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(star_line)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+
+
+print('-----------------------------------------')
+# Follow the same logic, I can print letter 'O'
+
+print(star_line)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(star_line)
+
+
+print('-----------------------------------------')
+# Follow the same logic, I can print letter 'n'
+
+print(star_line)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
+print(left_star_right_star)
