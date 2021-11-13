@@ -32,6 +32,14 @@ else:
     exit() 
 '''
 
+'''
+Press 'ENTER' immediately after you type ':'
+'''
+if password == real_password:
+    print('Password is correct')
+else:
+    print('Password is incorrect')
+    exit()
 
 
 print(f"Welcome, {user_name}! You've successfully logged in the game!")
@@ -58,3 +66,10 @@ if user tops up coins greater than 500, tell the user, you can continue to play
 Use if/else as well.
 
 '''
+
+coins_requirement = 500
+
+if total_coins < coins_requirement:
+    print(f"You still do not have enough coins, you need to top up extra {coins_requirement - total_coins} coins")
+else:
+    print(f"Now you have coins: {total_coins}. You can continue to play the game.")
