@@ -40,3 +40,38 @@ a = (7.462 + 3.351) / 2 = 5.406   b = 25 / 5.406 = 4.624          diff = 0.782
 ... ...
 
 '''
+
+# Step 1) Prepare the data ------------------------------
+
+x = int(input("Number: "))
+
+a = 1
+b = x / a
+actual_diff = b - a
+
+print(f"a:{a}, b:{b}, actual_diff:{actual_diff}")
+
+# Step 2) program begins --------------------------------
+
+while actual_diff > 0.00000000000000001:
+    a = (a + b) / 2
+    b = x / a
+    actual_diff = abs(a-b)
+    print(f"a:{a}, b:{b}, actual_diff:{actual_diff}")
+
+print(f"Square root of {x} is: {a}")
+print(f"{a} * {a} = {a ** 2}")
+
+'''
+SUMMARY -----------------------------------
+a) while loop always start with keyword 'while'
+b) after keyword 'while', we use a boolean expression.
+   The boolean expression tells us when the while loop stops.
+   when it is True, it continues looping
+   when it is False, it stops looping
+c) the boolean expression involves some variables (actual_diff)
+   Inside the while loop body, the variable's value should be updated, meaning the loop condition is updated
+   meaning the while loop has a opportunity to stop.
+   So, each time, an iteration finishes, Python will check, 'is the boolean expression still True?'
+-------------------------------------------
+'''
