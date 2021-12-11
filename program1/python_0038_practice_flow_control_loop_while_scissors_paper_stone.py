@@ -15,7 +15,35 @@ while user_a_choice != 'exit':
     print(user_a_choice, user_b_choice)
 
     # HOMEWORK BEGIN ------------------------
-
+    if user_a_choice == 'scissors':
+        if user_b_choice == 'scissors':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: Draw.")
+        elif user_b_choice == 'paper':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User A wins.")
+        elif user_b_choice == 'stone':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User B wins.")
+        else:
+            print(f"User B inputs a wrong choice: {user_b_choice}")
+    elif user_a_choice == 'paper':
+        if user_b_choice == 'scissors':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User B wins.")
+        elif user_b_choice == 'paper':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: Draw.")
+        elif user_b_choice == 'stone':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User A wins.")
+        else:
+            print(f"User B inputs a wrong choice: {user_b_choice}")
+    elif user_a_choice == 'stone':
+        if user_b_choice == 'scissors':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User A wins.")
+        elif user_b_choice == 'paper':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: User B wins.")
+        elif user_b_choice == 'stone':
+            print(f"User A {user_a_choice}, User B {user_b_choice}: Draw.")
+        else:
+            print(f"User B inputs a wrong choice: {user_b_choice}")
+    else:
+        print(f"User A inputs a wrong choice: {user_a_choice}")
     # HOMEWORK END   ------------------------
 
     print('-------------------------------------------------')
