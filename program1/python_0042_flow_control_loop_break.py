@@ -22,4 +22,11 @@ print("while loop ends.")
 # HOMEWORK
 # refactor 0041, counting sheep. when counting sheep to 50, break out of the while loop.
 
+sheep_count = 0
+while True:
+    print(f"{sheep_count} sheep, I feel sleepy...")
+    sheep_count += 1
+
+    if sheep_count > 50:
+        break
 
