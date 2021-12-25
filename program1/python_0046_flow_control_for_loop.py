@@ -22,9 +22,9 @@ print('[range style 1] ------------------------------------------')
 print('range(stop) generates number in range [0, stop)')
 print('----------------------------------------------------------')
 for i in range(5):
-    print(i)
+    print(i, end=' ')
 
-print('--------------------')
+print('\n--------------------')
 
 for i in range(10):
     print("*" * 10)

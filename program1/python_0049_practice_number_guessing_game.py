@@ -15,3 +15,65 @@ Step 1) Get lower bound & upper bound from console
 Step 2) Use random module to generate a number in range, assign it to variable 'answer'
 Step 3) Loop to ask user 'what's the correct number?' After you get user answer from console, you need to tell him higher or lower
 '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import random
+
+# Step 1) Get lower bound & upper bound from console
+lower = int(input("Lower bound: "))
+upper = int(input("Upper bound: "))
+
+# Step 2) Use random module to generate a number in range, assign it to variable 'answer'
+answer = random.randint(lower, upper)
+
+
+count = 0
+
+# Step 3)
+while True:
+
+    # Step 3.1) Get user guess
+    guess_result = int(input("Guess a number: "))
+
+    # Step 3.2) update the count
+    count += 1
+
+    # Step 3.3) check user guess
+    if answer == guess_result:
+        print(f'Congrats! You did it in {count} try.')
+        break
+
+    elif answer > guess_result:
+        print('Try again! You guessed too low!')
+
+    else:
+        print('Try again! You guessed too high!')
