@@ -58,3 +58,51 @@ Good luck!
 Mr Seah.
 
 '''
+
+while True:
+
+    # define variables ----------------------
+    profit_str = input("Total profit for the year:")
+    if profit_str == 'exit':
+        break
+
+    profit = int(profit_str)
+    bonus = 0
+
+
+    # use variables ----------------------
+    if profit <= 1000000:
+        bonus = profit * 0.1
+
+    elif profit <= 2000000:
+        bonus = 1000000 * 0.1
+        bonus += (profit - 1000000) * 0.075
+
+    elif profit <= 4000000:
+        bonus = 1000000 * 0.1
+        bonus += 1000000 * 0.075
+        bonus += (profit - 2000000) * 0.05
+
+    elif profit <= 6000000:
+        bonus = 1000000 * 0.1
+        bonus += 1000000 * 0.075
+        bonus += 2000000 * 0.05
+        bonus += (profit - 4000000) * 0.03
+
+    elif profit <= 10000000:
+        bonus = 1000000 * 0.1
+        bonus += 1000000 * 0.075
+        bonus += 2000000 * 0.05
+        bonus += 2000000 * 0.03
+        bonus += (profit - 6000000) * 0.015
+
+    else:
+        bonus = 1000000 * 0.1
+        bonus += 1000000 * 0.075
+        bonus += 2000000 * 0.05
+        bonus += 2000000 * 0.03
+        bonus += 4000000 * 0.015
+        bonus += (profit - 10000000) * 0.01
+
+    print(f"We should keep ${bonus} to our staff for this outlet.")
+
