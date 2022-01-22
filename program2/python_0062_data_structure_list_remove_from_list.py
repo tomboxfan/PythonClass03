@@ -22,12 +22,46 @@ print(animals) # ['tiger', 'shark', 'tiger', 'elephant', 'snake']
 
 # So you need to check index before calling pop method
 index = -20
-if index < len(animals):
+if -len(animals) <= index < len(animals):
      popped_animal = animals.pop(index)
 else:
     print(f"{index} is an invalid index value for list animals, right now we only have {len(animals)} items in animals")
 
+print(animals)
+
+
 '''
-HOMEWORK:
-How to correct line 25, to make sure the index value is always valid? Even when it is negative.
+The size of the animals list is 5.
+The positive index range is [0,5)
+The negative index range is [-5,-1]
+
+So it full index range is [-5, 5), which is [-len(animals), len(animals))
+
+
+'''
+
+
+# Solution 3: Use remove - remove item by value
+animals.remove('tiger')
+print(animals) # ['shark', 'tiger', 'elephant', 'snake']
+# remove(item) will only remove the 1st matched item, and ignore all the following matched items.
+
+# ValueError: list.remove(x): x not in list
+# animals.remove('leopard')
+
+if 'leopard' in animals:
+    animals.remove('leopard')
+else:
+    print("leopard doesn't exist in list animals")
+
+if 'penguin' not in animals:
+    animals.append('penguin')
+    print('penguin has been appended to animals')
+    print(animals)
+
+'''
+IMPORTANCE!!! ----------------------------------------------------
+'in' operator tells you whether the item exists in the list or not!
+------------------------------------------------------------------
+
 '''
