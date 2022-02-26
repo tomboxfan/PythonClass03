@@ -11,7 +11,7 @@ sorted_scores = sorted(scores)
 print(sorted_scores) # [60, 70, 80, 90]
 print(scores) # [80, 90, 70, 60] The scores list is NOT changed!
 
-sorted_scores = sorted(scores, reverse=True)
+sorted_scores = sorted(scores, reverse=True) # an extra reverse param allows you to sort the list in descending order.
 print(sorted_scores)
 
 
