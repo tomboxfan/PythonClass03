@@ -40,3 +40,29 @@ For example,
 3's factorial is 1 * 2 * 3 = 6                  -> 3!
 5's factorial is 1 * 2 * 3 * 4 * 5 = 120        -> 5!
 '''
+
+
+total = 0
+
+while True:
+
+    # read x from console
+    x = int(input("Next number:"))
+
+    # check x parameter
+    if x <= 0:
+        print("Quit!")
+        exit()
+
+    # calculate factorial of x
+    factorial = 1
+    for i in range(2, x+1):
+        factorial *= i
+
+    print(f"Factorial for {x} is: {factorial}")
+
+    # calculate total factorials
+    total += factorial
+    print(f"Total factorial is: {total}")
+    print("-----------------------------------")
+
