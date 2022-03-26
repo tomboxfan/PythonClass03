@@ -16,3 +16,19 @@ Define 3 functions from your daily life
 2 of them have parameters.
 Call the function several times.
 '''
+
+def display_message():
+    print("I've learnt how to define a function in python")
+
+
+display_message()
+
+
+
+
+def favorite_book(title):
+    print(f"My favorite book is <{title}>")
+
+
+favorite_book("Alice in Wonderland")
+
