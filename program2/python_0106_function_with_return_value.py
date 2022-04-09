@@ -45,7 +45,7 @@ print(nth_root(625,4)) # This should print the 4th root of 625, so it should pri
 '''
 
 def nth_root(x, n):
-    pass
+    return x ** (1/n)
 
 print(nth_root(4,2)) # 2
 print(nth_root(27,3)) # 3
