@@ -46,7 +46,7 @@ def print_chessboard(chess_board):
 
 
 # code for a while, test for a while
-print_chessboard(chess_board)
+# print_chessboard(chess_board)
 
 
 '''
@@ -139,6 +139,121 @@ def check_coordinates(chess_board, coordinates):
         return False
 
     return True
+
+
+
+# Step 3.5) Check win
+# How to check win?
+# I just need to check the row / the column / the 2 cross lines (if the coordinates is on the cross line), that's it!
+
+def check_win(chess_board, coordinates):
+    '''
+    This function checks whether the coordinates will cause a win in the chess board
+    if somebody wins, the program exits.
+
+    :param chess_board:
+    :param coordinates:
+    :return: nothing.
+    '''
+
+    x = coordinates[0]
+    y = coordinates[1]
+
+    # row win
+    if chess_board[x][0] == chess_board[x][1] and chess_board[x][0] == chess_board[x][2]:
+        print("Win!")
+        exit()
+
+    # column win
+    if chess_board[0][y] == chess_board[1][y] and chess_board[0][y] == chess_board[2][y]:
+        print("Win!")
+        exit()
+
+    # cross line win
+    if x == 0 and y == 0 or x == 1 and y == 1 or x == 2 and y == 2:
+        if chess_board[0][0] == chess_board[1][1] and chess_board[0][0] == chess_board[2][2]:
+            print("Win!")
+            exit()
+
+    if x == 0 and y == 2 or x == 1 and y == 1 or x == 2 and y == 0:
+        if chess_board[2][0] == chess_board[1][1] and chess_board[2][0] == chess_board[0][2]:
+            print("Win!")
+            exit()
+
+
+
+
+# Step 3) Player places a piece.
+
+def place_piece(chess_board, piece):
+    '''
+    This function will place a piece on the chess board
+
+    :param chess_board:
+    :param piece: it can either 'X' or 'O'
+    :return: nothing
+    '''
+
+    # Because sometimes player can give us wrong coordinates, so we need to loop until he gives us a correct one.
+    while True:
+
+        # Step 3.1) we ask player to input the coordinate x and y
+        coordinates = get_user_coordinates()
+
+        # Step 3.2) we check the coordinates x and y
+        is_valid_coordinates = check_coordinates(chess_board, coordinates)
+
+        if is_valid_coordinates:
+            break
+        else:
+            print("Please try again.")
+
+    x = coordinates[0]
+    y = coordinates[1]
+
+    # Step 3.3) update the chess board
+    chess_board[x][y] = piece
+
+    # Step 3.4) print chess board
+    print_chessboard(chess_board)
+
+    # Step 3.5) check wins
+    check_win(chess_board, coordinates)
+
+    print('-' * 20)
+
+
+# code for a while, test for a while
+# place_piece(chess_board, 'X')
+# place_piece(chess_board, 'O')
+
+
+# ------------------------------
+# MAIN PROGRAM BEGIN
+# ------------------------------
+
+welcome_msg = '''Tic Tac Toe Game Starts
+---------------------------------------------
+'''
+
+print(welcome_msg)
+
+print_chessboard(chess_board)
+
+# Define 2 players
+
+player1 = ["PLAYER 1", 'O']
+player2 = ["PLAYER 2", 'X']
+players = [player1, player2]
+
+# So I loop 9 times to call function - place_piece
+
+for turn in range(9):
+    player = players[turn % 2]
+    print(f"{player[0]}'s turn:")
+    place_piece(chess_board, player[1])
+
+print("Draw!")
 
 
 
