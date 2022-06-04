@@ -29,5 +29,5 @@ Explain clearly, why if we check till square root, then it is good enough alread
 '''
 
 
-l1 = s2_check_till_sqrt(100000)
+l1 = s2_check_till_sqrt(10000)
 print(l1)
