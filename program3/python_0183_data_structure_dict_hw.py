@@ -19,12 +19,27 @@ stupid_dict = {
 
 print(stupid_dict)
 
-'''
-Without run my code, tell me the output of these 3 lines:
+print('----------------------------------')
 
-print(stupid_dict['a'])
-print(stupid_dict[stupid_dict['a']])
+print(stupid_dict['a']) # 1
+
+print(stupid_dict[stupid_dict['a']]) # tuple("Hello")
+'''
+the above line equals to:
+print(stupid_dict[1])
+'''
+
 print(stupid_dict[stupid_dict[stupid_dict['a']]])
+'''
+the above line equals to:
+print(plane)
+'''
+
 print(stupid_dict[stupid_dict[stupid_dict['a']]]['name'])
 '''
+the above line equals to:
+print(plane['name']) # 'Boeing 787'
+'''
+
+
 
