@@ -1,4 +1,5 @@
 import turtle
+from datetime import datetime
 
 
 def draw_number_gap():
@@ -61,6 +62,8 @@ def draw_number(i):
     # 7th stroke - 5 / 6 not draw
     draw_line(False) if i in [5, 6] else draw_line(True)
 
+    draw_number_gap()
+
 
 
 
@@ -82,6 +85,42 @@ turtle.back(350)
 HOMEWORK:
 With the help of 0210 code, Draw date / time to the turtle console 
 '''
+
+now = datetime.now()
+
+# print hour ----------
+hour_str = str(now.hour)
+
+if now.hour < 10:
+    hour_str = '0' + hour_str
+
+for ch in hour_str:
+    draw_number(int(ch))
+
+
+# print minute ----------
+minute_str = str(now.minute)
+
+if now.minute < 10:
+    minute_str = '0' + minute_str
+
+for ch in minute_str:
+    draw_number(int(ch))
+
+
+# print second ----------
+second_str = str(now.second)
+
+if now.second < 10:
+    second_str = '0' + second_str
+
+for ch in second_str:
+    draw_number(int(ch))
+
+
+
+
+
 
 # Step 4) Finish --------------
 turtle.done()
