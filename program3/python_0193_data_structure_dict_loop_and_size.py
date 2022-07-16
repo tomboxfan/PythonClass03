@@ -16,6 +16,16 @@ print("\nSolution 3) .items() --> Loop through a dict's key and value ----------
 for key, value in car.items():
     print(key, '->', value)
 
+
+print("\nSolution 4) if you put nothing behind, it equals to loop dict key ---------------------")
+for key in car:
+    print(key)
+
+
+
+
+
+
 '''
 car.items() returns a list of tuple
 so here, car.items() returns:
